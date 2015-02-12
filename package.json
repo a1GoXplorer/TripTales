@@ -1,0 +1,22 @@
+{
+  "name": "TripTales",
+  "version": "1.0.0",
+  "description": "Travel Blog for Kids",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a1GoXplorer/TripTales.git"
+  },
+  "author": "Mark Daniels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1GoXplorer/TripTales/issues"
+  },
+  "homepage": "https://github.com/a1GoXplorer/TripTales",
+  "dependencies": {
+    "express": "^4.11.2"
+  }
+}
