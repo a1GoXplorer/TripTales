@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+     <style>
+     /*.canvas{
+      background-color: black;
+      width: 100%;
+      height: 100vh;
+      border: 10px solid black;*/
+
+      /*stars*/
+
+     /* background-color:black;
+background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
+width: 9000px;
+height: 9000px;*/
+     }
+
+     /*.hill1{
+      border: 5px #A17917 solid;
+      height: 500px;
+      width: 900px;
+      border-radius: 50%;
+      border-top-left-radius: 40%;
+      border-top-right-radius: 40%;
+      position: fixed;
+      background-color: #2ecc71;
+      margin-right: 1000px;
+      margin-top: 150px;
+     }
+
+     .hill2{
+      border: 5px #A17917 solid;
+      height: 500px;
+      width: 900px;
+      border-radius: 50%;
+      border-top-left-radius: 40%;
+      border-top-right-radius: 40%;
+      position: fixed;
+      background-color: #2ecc71;
+      margin-left: 500px;
+      margin-top: 150px;
+     }
+
+     .hill3{
+      border: 5px #A17917 solid;
+      height: 500px;
+      width: 900px;
+      border-radius: 50%;
+      border-top-left-radius: 40%;
+      border-top-right-radius: 40%;
+      position: fixed;
+      background-color: #2ecc71;
+      margin-left: 200px;
+      margin-top: 200px;
+     }
+
+
+     .cust-navbar{
+        background-color: skyblue;
+        border: none;
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        color: #E87B44;
+        font-size: 30px;
+        text-align: center;
+        text-transform: full-width;
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Gochi Hand', cursive;
+        font-size: 80px;
+
+      }
+
+      .col-xs-2 {
+        border: black solid 1px;
+      }
+
+      .col-xs-8 {
+        border: black solid 1px;
+      }
+
+      .hills{
+        top: 0px;
+        left: 100px;
+        position: fixed;
+      }
+
+      .content{
+        width: 100%;
+        height:0px;
+        background-color: white;
+        position: absolute;
+      }
+
+      .navbar-default {
+        float: right;
+      }
+
+      .nav-tabs {
+        float: right;
+      }
+*/
+      
+      body {
+    padding-top: 50px;
+    overflow: hidden;
+}
+#wrapper {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: inline-block;
+}
+#main-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    padding: 50px 0 0px 0;
+}
+#main {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 15px;
+}
+#sidebar-wrapper {
+    height: 100%;
+    padding: 50px 0 0px 0;
+    position: fixed;
+    border-right: 1px solid gray;
+}
+#sidebar {
+    position: relative;
+    height: 100%;
+    overflow:hidden;
+}
+#sidebar .list-group-item {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+}
+@media (max-width: 992px) {
+    body {
+        padding-top: 0px;
+    }
+}
+@media (min-width: 992px) {
+    #main-wrapper {
+        float:right;
+    }
+}
+@media (max-width: 992px) {
+    #main-wrapper {
+        padding-top: 0px;
+    }
+}
+@media (max-width: 992px) {
+    #sidebar-wrapper {
+        position: static;
+        height:auto;
+        max-height: 300px;
+      border-right:0;
+  }
+}
+.footer {
+    background-color:#ffffff;
+  bottom:0;
+    position:fixed;
+    padding:10px;
+}
+
+
+
+     </style>
+    </head>
+    <body>
+        <div id="header" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="icon-reorder"></i>
+        </button>
+        <a class="navbar-brand" href="#">
+            Brand
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">Navbar Item 1</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navbar Item 2<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Navbar Item2 - Sub Item 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Navbar Item 3</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+                <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="wrapper">
+  <div id="sidebar-wrapper" class="col-md-1">
+            <div id="sidebar">
+                <ul class="nav list-group">
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 1</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 2</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 9</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 10</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 11</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main-wrapper" class="col-md-11 pull-right">
+            <div id="main">
+              <div class="page-header">
+                <h3>Admin</h3>
+              </div>
+             <p> this is america, babe, you gotta think big to be big. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. this is america, babe, you gotta think big to be big. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. i thought about you every time i jerked off, dickhead. ,</p>
+<p> selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? i got a fever, and the only prescription is more cowbell. did you hear about the happy roman? he was "glad he ate her." he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. i got a fever, and the only prescription is more cowbell. i thought about you every time i jerked off, dickhead. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. this is america, babe, you gotta think big to be big. ,</p>
+<p> this is america, babe, you gotta think big to be big. i thought about you every time i jerked off, dickhead. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. you got the wrong guy, ace! you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? i got a fever, and the only prescription is more cowbell. ,</p>
+<p> selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? did you hear about the happy roman? he was "glad he ate her." did you hear about the happy roman? he was "glad he ate her." i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. i got a fever, and the only prescription is more cowbell. this is america, babe, you gotta think big to be big. did you hear about the happy roman? he was "glad he ate her." you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i got a fever, and the only prescription is more cowbell. i got a fever, and the only prescription is more cowbell. ,</p>
+<p> you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. this is america, babe, you gotta think big to be big. you got the wrong guy, ace! two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? did you hear about the happy roman? he was "glad he ate her." i thought about you every time i jerked off, dickhead. i thought about you every time i jerked off, dickhead. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i thought about you every time i jerked off, dickhead. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! ,</p>
+<p> i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. you got the wrong guy, ace! you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. you got the wrong guy, ace! did you hear about the happy roman? he was "glad he ate her." ,</p>
+<p> did you hear about the happy roman? he was "glad he ate her." you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. this is america, babe, you gotta think big to be big. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you got the wrong guy, ace! you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? you got the wrong guy, ace! what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you got the wrong guy, ace! two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. ,</p>
+<p> i got a fever, and the only prescription is more cowbell. i got a fever, and the only prescription is more cowbell. what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. i thought about you every time i jerked off, dickhead. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. did you hear about the happy roman? he was "glad he ate her." i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. ,</p>
+<p> you got the wrong guy, ace! selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. i thought about you every time i jerked off, dickhead. this is america, babe, you gotta think big to be big. </p>
+            </div>
+          
+            <div class="col-md-12 footer">
+              <ul class="nav navbar-nav"><li><a href="">Link</a></li><li><a href="">Link</a></li><li><a href="">Link</a></li></ul>
+            </div>
+          
+        </div>
+</div>
+    </body>
+</html>
