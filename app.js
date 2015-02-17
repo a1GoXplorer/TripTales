@@ -5,6 +5,14 @@ var express = require("express");
 
 /*embedded javascript*/
 var ejs = require("ejs");
+// app.set("view engine", "ejs");
+
+/*dependencies for signup/login/sessions*/
+var bcrypt = require('bcrypt');
+  var session = require('cookie-session');
+ var cookieParser = require('cookie-parser');
+ var passport = require('passport');
+  var passportLocal = require('passport-local');
 
 /*JSON parser*/
 var bodyParser = require("body-parser");
@@ -33,6 +41,11 @@ var app = express();
 app.get('/', function (req, res) {
   res.render('site/home.ejs')
 });
+
+//sign-up
+app.get('/signup', function (req, res) {
+  res.render('site/signup.ejs')
+})
 // checks to if server is listening to requests
  app.listen(process.env.PORT || 3000, function () {
    
