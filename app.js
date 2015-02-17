@@ -7,6 +7,13 @@ var express = require("express");
 var ejs = require("ejs");
 // app.set("view engine", "ejs");
 
+/*dependencies for signup/login/sessions*/
+var bcrypt = require('bcrypt');
+  var session = require('cookie-session');
+ var cookieParser = require('cookie-parser');
+ var passport = require('passport');
+  var passportLocal = require('passport-local');
+
 /*JSON parser*/
 var bodyParser = require("body-parser");
 
