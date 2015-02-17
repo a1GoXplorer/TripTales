@@ -5,7 +5,6 @@ var express = require("express");
 
 /*embedded javascript*/
 var ejs = require("ejs");
-// app.set("view engine", "ejs");
 
 /*dependencies for signup/login/sessions*/
 var bcrypt = require('bcrypt');
@@ -13,6 +12,8 @@ var bcrypt = require('bcrypt');
  var cookieParser = require('cookie-parser');
  var passport = require('passport');
   var passportLocal = require('passport-local');
+
+  var mocha = require('mocha');
 
 /*JSON parser*/
 var bodyParser = require("body-parser");
@@ -37,6 +38,9 @@ var sequelize = require("sequelize");
 /*application init*/
 var app = express();
 
+app.set("view engine", "ejs");
+
+
 /*root path*/
 app.get('/', function (req, res) {
   res.render('site/home.ejs')
@@ -46,6 +50,12 @@ app.get('/', function (req, res) {
 app.get('/signup', function (req, res) {
   res.render('site/signup.ejs')
 })
+
+//log-in
+app.get('/login', function (req, res) {
+  res.render('site/login.ejs')
+})
+
 // checks to if server is listening to requests
  app.listen(process.env.PORT || 3000, function () {
    

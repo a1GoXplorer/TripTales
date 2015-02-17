@@ -1,0 +1,40 @@
+<!--views/site/signup.ejs-->
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+     <style>
+        h1 {
+          font-family: 'Gochi Hand';
+          font-size: 50px;
+        }
+       form {
+        font-family: 'Gochi Hand';
+       }
+
+       body {
+          background-color: chocolate;
+        }
+
+       img {
+        border: 6px double gold;
+        border-radius: 20px;
+       }
+
+        </style>
+  </head>
+<body>
+<h1>TripTales</h1>
+    <form method="post" action="/signup">
+      <input type="text" name="user[email]" placeholder="User email"><br />
+      <input type="text" name="user[name]" placeholder="User name"><br />
+      <input type="text" name="user[password]" placeholder="User password"><br />
+      <button>Save </button>
+    </form>
+    <div class="joke">
+      <img src="http://sweetwaterstiletto.com/wp-content/uploads/2014/12/0200361001411064885_filepicker.png">
+    </img>
+  </div>
+</body>
+</html>
