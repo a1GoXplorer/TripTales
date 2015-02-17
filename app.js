@@ -13,6 +13,8 @@ var bcrypt = require('bcrypt');
  var passport = require('passport');
   var passportLocal = require('passport-local');
 
+  var mocha = require('mocha');
+
 /*JSON parser*/
 var bodyParser = require("body-parser");
 
@@ -85,6 +87,9 @@ passport.deserializeUser(function(id, done){
       done(err, null);
     });
 });
+
+app.set("view engine", "ejs");
+
 
 /*root path*/
 app.get('/', function (req, res) {
