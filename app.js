@@ -46,6 +46,12 @@ app.get('/', function (req, res) {
 app.get('/signup', function (req, res) {
   res.render('site/signup.ejs')
 })
+
+//log-in
+app.get('/login', function (req, res) {
+  res.render('site/login.ejs')
+})
+
 // checks to if server is listening to requests
  app.listen(process.env.PORT || 3000, function () {
    
