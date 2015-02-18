@@ -4,113 +4,6 @@
      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
      <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
      <style>
-     /*.canvas{
-      background-color: black;
-      width: 100%;
-      height: 100vh;
-      border: 10px solid black;*/
-
-      /*stars*/
-
-     /* background-color:black;
-background-image:
-radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
-background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-
-width: 9000px;
-height: 9000px;*/
-     }
-
-     /*.hill1{
-      border: 5px #A17917 solid;
-      height: 500px;
-      width: 900px;
-      border-radius: 50%;
-      border-top-left-radius: 40%;
-      border-top-right-radius: 40%;
-      position: fixed;
-      background-color: #2ecc71;
-      margin-right: 1000px;
-      margin-top: 150px;
-     }
-
-     .hill2{
-      border: 5px #A17917 solid;
-      height: 500px;
-      width: 900px;
-      border-radius: 50%;
-      border-top-left-radius: 40%;
-      border-top-right-radius: 40%;
-      position: fixed;
-      background-color: #2ecc71;
-      margin-left: 500px;
-      margin-top: 150px;
-     }
-
-     .hill3{
-      border: 5px #A17917 solid;
-      height: 500px;
-      width: 900px;
-      border-radius: 50%;
-      border-top-left-radius: 40%;
-      border-top-right-radius: 40%;
-      position: fixed;
-      background-color: #2ecc71;
-      margin-left: 200px;
-      margin-top: 200px;
-     }
-
-
-     .cust-navbar{
-        background-color: skyblue;
-        border: none;
-        height: 200px;
-        width: 100%;
-        position: fixed;
-        color: #E87B44;
-        font-size: 30px;
-        text-align: center;
-        text-transform: full-width;
-        padding: 0px;
-        margin: 0px;
-        font-family: 'Gochi Hand', cursive;
-        font-size: 80px;
-
-      }
-
-      .col-xs-2 {
-        border: black solid 1px;
-      }
-
-      .col-xs-8 {
-        border: black solid 1px;
-      }
-
-      .hills{
-        top: 0px;
-        left: 100px;
-        position: fixed;
-      }
-
-      .content{
-        width: 100%;
-        height:0px;
-        background-color: white;
-        position: absolute;
-      }
-
-      .navbar-default {
-        float: right;
-      }
-
-      .nav-tabs {
-        float: right;
-      }
-*/
       
       body {
     padding-top: 50px;
@@ -176,12 +69,27 @@ height: 9000px;*/
       border-right:0;
   }
 }
+
+.maincontent{
+  background-color: #EEF5C9;
+  border: brown 4px ridge;
+  border-radius: 15px;
+}
+.navbar-brand{
+  font-family:  'Gochi Hand';
+}
+
+.navbar-nav{
+  background-color: #62F096;
+
+}
 .footer {
     background-color:#ffffff;
   bottom:0;
     position:fixed;
     padding:10px;
 }
+
 
 
 
@@ -194,27 +102,30 @@ height: 9000px;*/
             <i class="icon-reorder"></i>
         </button>
         <a class="navbar-brand" href="#">
-            Brand
+            TripTales
         </a>
     </div>
     <nav class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li>
-                <a href="#">Navbar Item 1</a>
+                <a href="#">Start a Trip!</a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navbar Item 2<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Some Rad Functionality<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Navbar Item2 - Sub Item 1</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Navbar Item 3</a>
+                <a href="#">Tell a Tale!</a>
             </li>
         </ul>
         <ul class="nav navbar-nav pull-right">
             <li class="dropdown">
+
+
                 <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
+
                 <ul class="dropdown-menu pull-right">
                     <li><a href="#">Log Out</a></li>
                 </ul>
@@ -227,41 +138,44 @@ height: 9000px;*/
             <div id="sidebar">
                 <ul class="nav list-group">
                     <li>
-                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 1</a>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Family Vacation to Wallyworld</a>
                     </li>
                     <li>
-                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 2</a>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>European Vacation</a>
                     </li>
                     <li>
-                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 9</a>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Getting A Christmas Tree</a>
                     </li>
                     <li>
-                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 10</a>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Trip to Vegas</a>
                     </li>
                     <li>
-                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 11</a>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>We're going to the Airport!</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div id="main-wrapper" class="col-md-11 pull-right">
-            <div id="main">
+            <div class="maincontent" id="main">
               <div class="page-header">
-                <h3>Admin</h3>
+                <h3>Family Vacation to WallyWorld</h3>
               </div>
-             <p> this is america, babe, you gotta think big to be big. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. this is america, babe, you gotta think big to be big. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. i thought about you every time i jerked off, dickhead. ,</p>
-<p> selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? i got a fever, and the only prescription is more cowbell. did you hear about the happy roman? he was "glad he ate her." he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. i got a fever, and the only prescription is more cowbell. i thought about you every time i jerked off, dickhead. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. this is america, babe, you gotta think big to be big. ,</p>
-<p> this is america, babe, you gotta think big to be big. i thought about you every time i jerked off, dickhead. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. you got the wrong guy, ace! you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? i got a fever, and the only prescription is more cowbell. ,</p>
-<p> selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? did you hear about the happy roman? he was "glad he ate her." did you hear about the happy roman? he was "glad he ate her." i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. i got a fever, and the only prescription is more cowbell. this is america, babe, you gotta think big to be big. did you hear about the happy roman? he was "glad he ate her." you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. he hid it in the one place he knew he could hide something: his ass. five long years, he wore this watch up his ass. then, when he died of dysentery, he gave me the watch. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i got a fever, and the only prescription is more cowbell. i got a fever, and the only prescription is more cowbell. ,</p>
-<p> you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. this is america, babe, you gotta think big to be big. you got the wrong guy, ace! two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? did you hear about the happy roman? he was "glad he ate her." i thought about you every time i jerked off, dickhead. i thought about you every time i jerked off, dickhead. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i thought about you every time i jerked off, dickhead. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! ,</p>
-<p> i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. you got the wrong guy, ace! you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. i'm neglecting my other guests. enjoy yourself, you'll find the young ladies stimulating company. i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. you got the wrong guy, ace! did you hear about the happy roman? he was "glad he ate her." ,</p>
-<p> did you hear about the happy roman? he was "glad he ate her." you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. this is america, babe, you gotta think big to be big. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you got the wrong guy, ace! you know why the yankees always win, frank? it's 'cause the other teams can't stop staring at those damn pinstripes. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? you got the wrong guy, ace! what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you got the wrong guy, ace! two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. ,</p>
-<p> i got a fever, and the only prescription is more cowbell. i got a fever, and the only prescription is more cowbell. what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. i thought about you every time i jerked off, dickhead. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. did you hear about the happy roman? he was "glad he ate her." i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. ,</p>
-<p> you got the wrong guy, ace! selina! selina kyle, you're fired! and bruce wayne, why are you dressed up like batman? what do you want me to say, that i'm sorry? that i apologize? well, people in hell want ice water, pal. you're talking to me all wrong... it's the wrong tone. you do it again and i'll stab you in the face with a soldering iron. hey, tell me, does your mother sew? boom. get her to sew that! i don't know what you want, but i know i can get it for you, with a minimum of fuss! money, jewels, a *very* big ball of string. two little mice fell in a bucket of cream. the first mouse quickly gave up and drowned. the second mouse, wouldn't quit. he struggled so hard that eventually he churned that cream into butter and crawled out. gentlemen, as of this moment, i am that second mouse. i thought about you every time i jerked off, dickhead. this is america, babe, you gotta think big to be big. </p>
+              <img src="http://media.247sports.com/Uploads/Assets/432/998/2998432.gif"></img>
+             <p>Bavaria ipsum dolor sit amet fias Oachkatzlschwoaf Almrausch gscheid eana i daad zua hoggd mogsd a Bussal aasgem. Zwoa de Steckerleis Xaver obandeln Foidweg ghupft wia gsprunga Watschnpladdla! Om auf’n Gipfe Landla da, Schmankal gwiss. Watschnpladdla wuid iabaroi auszutzeln, oamoi! Wea ko, dea ko i hob i an Suri, des is hoid aso woaß. Hi oba Freibia, Schneid. Landla oamoi Enzian mechad, a damischa Graudwiggal. Fünferl is Trachtnhuat ebba so Lewakaas Wurschtsolod! I daad Schuabladdla Spezi Enzian Auffisteign oans, zwoa, gsuffa scheans auffi oans, zwoa, gsuffa a Maß und no a Maß. Nimma Marterl baddscher Mongdratzal Wurscht hogg ma uns zamm nomoi, kimmt a ganze. Haferl do lem und lem lossn des Schbozal Broadwurschtbudn unbandig es, Goaßmaß.</p>
+<p>Baddscher Schmankal Mamalad gar nia need ghupft wia gsprunga aasgem middn hi Almrausch und glei wirds no fui lustiga. Sowos resch i hob di narrisch gean, des is a gmahde Wiesn? Von Bradwurschtsemmal wea ko, dea ko hi glei vasteh, gelbe Rüam. Wiesn singd i an hea i hob di narrisch gean wia Landla, bittschön! O’ha sog i Kaiwe, kumm geh auf’d Schellnsau hob Goaßmaß nia kloan! Nia sowos Biawambn da Brotzeit. A liabs Deandl dahoam i bin a woschechta Bayer hallelujah sog i, luja in da Namidog Diandldrahn! Sog i Fünferl hoam Kneedl Graudwiggal Sauwedda, so schee mim Radl foahn di de hoid! Auf’d Schellnsau zwoa schnacksln a ganze Hoiwe Vergeltsgott des Spezi gscheid. Ognudelt ma Meidromml Fünferl Spotzerl nia need Watschnbaam Weißwiaschd Brodzeid vui.
+Prosd Brotzeit d’ hea de Sonn, mim Radl foahn. Auf gehds beim Schichtl gschmeidig in da greana Au griasd eich midnand Schaung kost nix Leonhardifahrt ned, Xaver Gaudi Breihaus. Griasnoggalsubbm schaugn abfieseln wolln da, hog di hi bitt Oachkatzlschwoaf. A bissal damischa scheans Edlweiss ma, Brezn. Baddscher Enzian wolln wann griagd ma nacha wos z’dringa i bin a woschechta Bayer, Steckerleis hallelujah sog i, luja gelbe Rüam gschmeidig gscheckate gschmeidig. Brezn Gams sauba Wurscht Spuiratz, abfieseln Biaschlegl mogsd a Bussal ded! Damischa middn baddscher Wurschtsolod Haferl. Schmankal Maibam Wurschtsolod des is schee gscheit hea Maderln Gstanzl Trachtnhuat Deandlgwand Gidarn. A so a Schmarn schnacksln allerweil, Schneid nimmds. Vui huift vui Gstanzl schoo Graudwiggal Schdeckalfisch mogsd a Bussal Greichats san unbandig pfenningguat.
+Oans zünftig Kneedl i waar soweid Maßkruag resch Watschnpladdla. Wuid Kirwa wea ko, dea ko Habedehre Milli hogg ma uns zamm hoid Baamwach gwiss des muas ma hoid kenna. I wea ko, dea ko Biazelt schoo g’hupft wia gsprunga. Des wiad a Mordsgaudi gscheid es, Semmlkneedl von boarischer: Imma Engelgwand greaßt eich nachad sauba, gor! Gaudi Bladl gwiss hob i an Suri wolpern mogsd a Bussal af da noch da Giasinga Heiwog oans, zwoa, gsuffa. Griaß God beinand Kuaschwanz Milli greaßt eich nachad. </p>
+<p>Watschnbaam ham Mongdratzal g’hupft wia gsprunga vo de hogg ma uns zamm schaugn wos Zwedschgndadschi! Wuid Charivari des is a gmahde Wiesn do legst di nieda gschmeidig hogg ma uns zamm: A ognudelt scheans damischa Spotzerl Stubn. Xaver spernzaln mi ma Stubn, Maderln Fingahaggln. Jo leck mi Schaung kost nix auffi moand Radi.
+Kaiwe Habedehre Hetschapfah i sog ja nix, i red ja bloß midanand auf’d Schellnsau gwiss, i. A fescha Bua Biakriagal kumm geh, sauba Schuabladdla. O’ha obandln von, kloan. Xaver hallelujah sog i, luja imma da Kini Kaiwe, Ewig und drei Dog hi i sog ja nix, i red ja bloß. Hogg ma uns zamm hea Bussal Marei gscheckate guad, wolln. No a Maß blärrd sauba Schneid Hetschapfah hinter’m Berg san a no Leit und singan nia need Brezn? Hod Kirwa aasgem Gschicht ja, wo samma denn Ledahosn umma! Des is a gmahde Wiesn o’ha af heid gfoids ma sagrisch guad Trachtnhuat naa, etza. Spotzerl Schorsch Kirwa gschmeidig weida a sodala. Nackata Baamwach boarischer auszutzeln gar nia need Schneid hinter’m Berg san a no Leit Schuabladdla Edlweiss. A Prosit der Gmiadlichkeit woaß Buam Mamalad Kneedl Maßkruag a bravs Kirwa.</p>
+<p>Mi Schmankal om auf’n Gipfe und nimmds gwiss so Gams Wurschtsolod. Ned woar pfundig ja, wo samma denn resch mei sog i kimmt nackata hogg ma uns zamm baddscher. Xaver obandeln Namidog Prosd de Sonn, hod amoi ja, wo samma denn. Ledahosn do legst di nieda unbandig, damischa: Jodler auf der Oim, da gibt’s koa Sünd fensdaln, naa Trachtnhuat allerweil hoggd geh Resi! Goaßmaß o’ha a Maß und no a Maß Diandldrahn woaß! Zua Meidromml a ganze Hoiwe schüds nei. Sog i greaßt eich nachad Klampfn, aba! Griasd eich midnand i Biagadn, dringma aweng! Dei Prosd boarischer scheans Leonhardifahrt back mas am acht’n Tag schuf Gott des Bia Landla Fingahaggln Stubn Bradwurschtsemmal? Wea nia ausgähd, kummt nia hoam Baamwach Lewakaas luja Stubn im Beidl und sei. Heid Schaung kost nix i daad Baamwach, Fingahaggln!</p>
+<p>Ham hallelujah sog i, luja gor, kummd. I bin a woschechta Bayer gelbe Rüam am acht’n Tag schuf Gott des Bia gscheid ned, hoggd Habedehre i hob di narrisch gean obandln. Schdeckalfisch geh no Foidweg Kuaschwanz Kuaschwanz, a Prosit der Gmiadlichkeit. Breihaus di af i hob di narrisch gean Kirwa jo mei is des schee Jodler hod i bin a woschechta Bayer? Reiwadatschi schaugn Freibia, midanand. A Maß und no a Maß sog i Ledahosn Ramasuri vui von. Resi fei kloan, ham. I hob di narrisch gean middn Weißwiaschd hallelujah sog i, luja, Sepp Broadwurschtbudn vasteh geh Ledahosn wui a ganze Hoiwe. Scheans Steckerleis Leonhardifahrt Hetschapfah, resch. Resi ma mim Radl foahn di da middn gschmeidig nia. Heid midanand von nia need Hendl wos, Hendl af Wurschtsolod! Nia need woaß Schdarmbeaga See, d’:</p>
+<p>Kimmt Gidarn obandln oans, zwoa, gsuffa, heitzdog: I sog ja nix, i red ja bloß vasteh Gamsbart, hawadere midananda Gams Vergeltsgott Biawambn Biakriagal Weißwiaschd sammawiedaguad. A bravs aba san muass um Godds wujn soi Radi ded, Ramasuri mehra. Mi Milli singd Oachkatzlschwoaf Schmankal und koa wia da Buachbinda Wanninger? Goaßmaß Deandlgwand sauba, fensdaln back mas weida Meidromml sei i hob di narrisch gean oba! Maibam großherzig Woibbadinga Marei dahoam. De Sonn auszutzeln da, hog di hi des is hoid aso. Ohrwaschl Sepp owe mehra Biakriagal Gams damischa Reiwadatschi, do legst di nieda fei? Griasd eich midnand Obazda heid liberalitas Bavariae i hob di liab Biaschlegl Mongdratzal fias abfieseln! Is di zünftig hogg ma uns zamm wia da Buachbinda Wanninger, moand unbandig heid auf gehds beim Schichtl.</p>
+<p>Hod Milli i daad ognudelt: Landla wann griagd ma nacha wos z’dringa nackata, fensdaln obandln greaßt eich nachad i bin a woschechta Bayer: Da Kini fei Zidern Biakriagal hoid Weibaleid wea nia ausgähd, kummt nia hoam i sog ja nix, i red ja bloß wea ko, dea ko von Oachkatzlschwoaf. Weiznglasl i moan oiwei Brezn sei so om auf’n Gipfe, Stubn i hob di liab Sauakraud. Obandln anbandeln di trihöleridi dijidiholleri pfundig Watschnbaam owe. Des basd scho i moan oiwei Blosmusi, wea nia ausgähd, kummt nia hoam vui: Wurschtsolod da Kini Brotzeit kumm geh i sog ja nix, i red ja bloß Prosd ozapfa do Sauwedda a bissal! Boarischer a ganze Hoiwe Radler i sog ja nix, i red ja bloß, von ded Jodler wui Ramasuri! Ned Milli Biagadn scheans Biazelt damischa singan des basd scho Griasnoggalsubbm, gwiss. Fünferl hogg ma uns zamm Wurschtsolod, a bissal schaugn sodala Fünferl Biawambn.</p>
+<p>Jo mei is des schee trihöleridi dijidiholleri Schorsch, Schneid vo de no a liabs Deandl blärrd is des liab glei. Schorsch gar nia need Ewig und drei Dog ozapfa heitzdog Baamwach is Kuaschwanz Charivari gwihss. Moand Gams wia woaß, ned Brezn. Ja, wo samma denn weida Heimatland Buam, nomoi nomoi du dadst ma scho daugn. Und glei wirds no fui lustiga Schaung kost nix ham, unbandig singd. No fei ghupft wia gsprunga gwiss, Servas ognudelt vui Goaßmaß. Da, hog di hi hi wuid pfiad de nix! Lem und lem lossn ma naa, an Schbozal Schaung kost nix: Servas a i sog ja nix, i red ja bloß gar nia need, barfuaßat mei vui no a Maß. Hallelujah sog i, luja wos do legst di nieda Kuaschwanz is ma Wuascht guad hoid im Beidl des is schee: Heimatland i bin a woschechta Bayer hoggd, des basd scho Vergeltsgott a fescha Bua.</p>
             </div>
           
             <div class="col-md-12 footer">
-              <ul class="nav navbar-nav"><li><a href="">Link</a></li><li><a href="">Link</a></li><li><a href="">Link</a></li></ul>
+              <ul class="nav navbar-nav"><li><a href="">About</a></li><li><a href="">Contact</a></li><li><a href="">Github</a></li></ul>
             </div>
           
         </div>
