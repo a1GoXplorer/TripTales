@@ -21,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
         //this.hasMany(models.trip)
+        user.hasMany(models.file);
       },
       findByEmail: function (email) {
         return this.find({

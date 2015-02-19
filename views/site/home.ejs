@@ -3,6 +3,8 @@
   <head>
      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
      <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Dekko' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
      <style>
       
       body {
@@ -45,6 +47,7 @@
         border-left: 0;
         border-right: 0;
         border-top: 0;
+        font-family: 'Dekko', cursive;
 }
 @media (max-width: 992px) {
     body {
@@ -72,15 +75,17 @@
 
 .maincontent{
   background-color: #EEF5C9;
-  border: brown 4px ridge;
-  border-radius: 15px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 18px;
+  
 }
 .navbar-brand{
   font-family:  'Gochi Hand';
 }
 
 .navbar-nav{
-  background-color: #62F096;
+  /*background-color: #62F096;*/
+  font-family: 'Dekko', cursive;
 
 }
 .footer {
@@ -110,15 +115,15 @@
             <li>
                 <a href="#">Start a Trip!</a>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Some Rad Functionality<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Navbar Item2 - Sub Item 1</a></li>
-                </ul>
-            </li>
+
             <li>
                 <a href="#">Tell a Tale!</a>
             </li>
+
+            <li>
+                <a href="/map">Where am I?</a>
+            </li>
+
         </ul>
         <ul class="nav navbar-nav pull-right">
             <li class="dropdown">
@@ -159,16 +164,32 @@
             <div class="maincontent" id="main">
               <div class="page-header">
                 <h3>Family Vacation to WallyWorld</h3>
-                 
-                 <div class="uploadingzone">
-                <form method="post" enctype="multipart/form-data" action="/upload">
-                <input type="file" name="file">
-                <input type="submit" value="Submit">
-                </form>
+                <textarea style="width:500px; height:100px"></textarea>
+
+
+
+                <div id='upload-image'>
                 </div>
 
+
+                <form id       =  "uploadForm"
+                     enctype   =  "multipart/form-data"
+                     action    =  "/profile"
+                     method    =  "post" >
+                <input type="file" name="userPhoto" />
+                <input type="submit" value="Upload Image" name="submit">
+                </form>
+                 
+                 <!-- <div class="uploadingzone">
+                    <img src="/image.png" /></img>
+                    <form method="post" enctype="multipart/form-data" action="/upload">
+                        <input type="file" name="file">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div> -->
+
               </div>
-              <img src="http://media.247sports.com/Uploads/Assets/432/998/2998432.gif"></img>
+              <img src="http://cdn.collider.com/wp-content/image-base/Movies/V/Vacation/images/Vacation%20movie%20image%20Chevy%20Chase%20(5).jpg"></img>
              <p>Bavaria ipsum dolor sit amet fias Oachkatzlschwoaf Almrausch gscheid eana i daad zua hoggd mogsd a Bussal aasgem. Zwoa de Steckerleis Xaver obandeln Foidweg ghupft wia gsprunga Watschnpladdla! Om auf’n Gipfe Landla da, Schmankal gwiss. Watschnpladdla wuid iabaroi auszutzeln, oamoi! Wea ko, dea ko i hob i an Suri, des is hoid aso woaß. Hi oba Freibia, Schneid. Landla oamoi Enzian mechad, a damischa Graudwiggal. Fünferl is Trachtnhuat ebba so Lewakaas Wurschtsolod! I daad Schuabladdla Spezi Enzian Auffisteign oans, zwoa, gsuffa scheans auffi oans, zwoa, gsuffa a Maß und no a Maß. Nimma Marterl baddscher Mongdratzal Wurscht hogg ma uns zamm nomoi, kimmt a ganze. Haferl do lem und lem lossn des Schbozal Broadwurschtbudn unbandig es, Goaßmaß.</p>
 <p>Baddscher Schmankal Mamalad gar nia need ghupft wia gsprunga aasgem middn hi Almrausch und glei wirds no fui lustiga. Sowos resch i hob di narrisch gean, des is a gmahde Wiesn? Von Bradwurschtsemmal wea ko, dea ko hi glei vasteh, gelbe Rüam. Wiesn singd i an hea i hob di narrisch gean wia Landla, bittschön! O’ha sog i Kaiwe, kumm geh auf’d Schellnsau hob Goaßmaß nia kloan! Nia sowos Biawambn da Brotzeit. A liabs Deandl dahoam i bin a woschechta Bayer hallelujah sog i, luja in da Namidog Diandldrahn! Sog i Fünferl hoam Kneedl Graudwiggal Sauwedda, so schee mim Radl foahn di de hoid! Auf’d Schellnsau zwoa schnacksln a ganze Hoiwe Vergeltsgott des Spezi gscheid. Ognudelt ma Meidromml Fünferl Spotzerl nia need Watschnbaam Weißwiaschd Brodzeid vui.
 Prosd Brotzeit d’ hea de Sonn, mim Radl foahn. Auf gehds beim Schichtl gschmeidig in da greana Au griasd eich midnand Schaung kost nix Leonhardifahrt ned, Xaver Gaudi Breihaus. Griasnoggalsubbm schaugn abfieseln wolln da, hog di hi bitt Oachkatzlschwoaf. A bissal damischa scheans Edlweiss ma, Brezn. Baddscher Enzian wolln wann griagd ma nacha wos z’dringa i bin a woschechta Bayer, Steckerleis hallelujah sog i, luja gelbe Rüam gschmeidig gscheckate gschmeidig. Brezn Gams sauba Wurscht Spuiratz, abfieseln Biaschlegl mogsd a Bussal ded! Damischa middn baddscher Wurschtsolod Haferl. Schmankal Maibam Wurschtsolod des is schee gscheit hea Maderln Gstanzl Trachtnhuat Deandlgwand Gidarn. A so a Schmarn schnacksln allerweil, Schneid nimmds. Vui huift vui Gstanzl schoo Graudwiggal Schdeckalfisch mogsd a Bussal Greichats san unbandig pfenningguat.
@@ -183,10 +204,34 @@ Kaiwe Habedehre Hetschapfah i sog ja nix, i red ja bloß midanand auf’d Schell
             </div>
           
             <div class="col-md-12 footer">
-              <ul class="nav navbar-nav"><li><a href="">About</a></li><li><a href="">Contact</a></li><li><a href="">Github</a></li></ul>
+              <ul class="nav navbar-nav"><li><a href="">About</a></li><li><a href="">Contact</a></li><li><a href="https://github.com/a1GoXplorer/TripTales">Github</a></li></ul>
             </div>
           
         </div>
 </div>
-    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+
+     $('#uploadForm').submit(function() {
+
+        $(this).ajaxSubmit({
+
+            error: function(xhr) {
+                    status('Error: ' + xhr.status);
+            },
+
+            success: function(response) {
+                      console.log(response);
+            }
+    });
+        //Very important line, it disable the page refresh.
+    return false;
+    });    
+});
+  </script>
+      </body>
+
 </html>

@@ -6,6 +6,12 @@ var express = require("express");
 /*embedded javascript*/
 var ejs = require("ejs");
 
+/*file path*/
+var path = require('path');
+
+/*file system*/
+var fs = ('fs');
+
 /*dependencies for signup/login/sessions*/
 var bcrypt = require('bcrypt');
   var session = require('cookie-session');
@@ -13,7 +19,11 @@ var bcrypt = require('bcrypt');
  var passport = require('passport');
   var passportLocal = require('passport-local');
 
+/*testing framework*/
   var mocha = require('mocha');
+
+/*file upload*/
+var multer = require('multer');
 
 /*JSON parser*/
 var bodyParser = require("body-parser");
@@ -21,9 +31,14 @@ var bodyParser = require("body-parser");
 // Instantiate express
 var app = express();
 
+var done=false;
+
+
 //parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+app.use(bodyParser({uploadDir: '/uploads'}));
+
 
 // app.use(function (req, res) {
 //   res.setHeader('Content-Type', 'text/plain')
@@ -98,8 +113,52 @@ app.get('/', function (req, res) {
 
 //sign-up
 app.get('/signup', function (req, res) {
-  res.render('site/signup')
-})
+  res.render('site/signup');
+});
+
+//map page
+app.get('/map', function (req, res) {
+  res.render('site/map');
+});
+
+
+/* Configure the multer */
+
+app.use(multer({ dest: './uploads/',
+  rename: function (fieldname, filename) {
+    return filename+Date.now();
+  },
+ onFileUploadStart: function (file) {
+    console.log(file.originalname + ' is starting ...')
+  },
+ onFileUploadComplete: function (file) {
+     console.log(file.fieldname + ' uploaded to ' + file.path)
+     done=true;
+   }
+   }));
+
+/* routes for upload */
+
+ // app.get('/', function(req, res) {
+ //     res.sendFile("/site/profile");
+ // });
+
+ app.post('/', function(req, res) {
+  if(done==true){
+    
+    res.end("File uploaded");
+    res.redirect('/')
+  }
+ });
+
+ app.get('/users/:id', function (req, res) {
+     res.render('site/home');
+ });
+
+ app.post('/profile', function(req, res) {
+
+    console.log("\n\n\n\n\n\n"+req.files.userPhoto.path);
+ });
 
 //posts new user info
 app.post('/signup', function (req, res) {
@@ -117,7 +176,7 @@ app.post('/signup', function (req, res) {
     },
     function(err, user, msg){
       //res.send("Other");
-      res.redirect('/');
+      res.redirect('/users/' + user.id);
     });
     //console.log(req.body);
     //res.redirect('/');
@@ -133,6 +192,32 @@ app.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/login'
 }));
+
+/*upload files
+app.post('/upload', function (req, res) {
+    var tempPath = req.files.file.path,
+        targetPath = path.resolve('./uploads/image.png');
+    if (path.extname(req.files.file.name).toLowerCase() === '.png') {
+        fs.rename(tempPath, targetPath, function(err) {
+            if (err) throw err;
+            console.log("Upload completed!");
+            res.redirect("/profile")
+        });
+
+    } else {
+        fs.unlink(tempPath, function () {
+            // if (err) throw err;
+            res.redirect("/");
+            console.error("Only .png files are allowed!");
+        });
+
+    }
+}); */
+
+//view files
+app.get('/image.png', function (req, res) {
+    res.sendFile(path.resolve('./uploads/image.png'));
+}); 
 
 //about
 app.get('/about', function (req, res) {
