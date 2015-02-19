@@ -156,7 +156,7 @@ app.use(multer({ dest: './uploads/',
  });
 
  app.post('/profile', function(req, res) {
-
+    
     console.log("\n\n\n\n\n\n"+req.files.userPhoto.path);
  });
 
