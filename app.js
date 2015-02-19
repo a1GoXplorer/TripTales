@@ -14,13 +14,13 @@ var fs = ('fs');
 
 /*dependencies for signup/login/sessions*/
 var bcrypt = require('bcrypt');
-  var session = require('cookie-session');
- var cookieParser = require('cookie-parser');
- var passport = require('passport');
-  var passportLocal = require('passport-local');
+var session = require('cookie-session');
+var cookieParser = require('cookie-parser');
+var passport = require('passport');
+var passportLocal = require('passport-local');
 
 /*testing framework*/
-  var mocha = require('mocha');
+var mocha = require('mocha');
 
 /*file upload*/
 var multer = require('multer');
@@ -30,8 +30,6 @@ var bodyParser = require("body-parser");
 
 // Instantiate express
 var app = express();
-
-var done=false;
 
 
 //parse application/x-www-form-urlencoded
@@ -60,12 +58,12 @@ var sequelize = require("sequelize");
 
 app.set('view engine', 'ejs');
 
-app.use(session( {
-  secret: 'thisismysecretkey',
-  name: 'chocolate chip',
-  // this is in milliseconds
-  maxage: 3600000
-  })
+app.use(session({
+                  secret: 'thisismysecretkey',
+                  name: 'chocolate chip',
+                  // this is in milliseconds
+                  maxage: 3600000
+                })
 );
 
 // get passport started
@@ -90,7 +88,7 @@ Taking a string and turns into an object
 */
 passport.deserializeUser(function(id, done){
   console.log("DESERIALIZED JUST RAN!");
-  db.user.find({
+  db.User.find({
       where: {
         id: id
       }
@@ -105,7 +103,24 @@ passport.deserializeUser(function(id, done){
 
 app.set("view engine", "ejs");
 
-
+app.use('/uploads/:path', function (req, res, next) {
+  var id = req.user.id;
+  db.file.find({
+    where: {
+      UserId: id,
+      path: 'uploads/' + req.params.path
+    }
+  }).success(function (file){
+    if (file){
+      next();
+    } else {
+      res.redirect("/");
+    }
+  }).error(function(err) {
+    res.send([id, req.params, arguments]);
+  })
+})
+app.use('/uploads',express.static(__dirname + '/uploads'));
 /*root path*/
 app.get('/', function (req, res) {
     res.render('site/home');
@@ -133,7 +148,7 @@ app.use(multer({ dest: './uploads/',
   },
  onFileUploadComplete: function (file) {
      console.log(file.fieldname + ' uploaded to ' + file.path)
-     done=true;
+     
    }
    }));
 
@@ -143,20 +158,25 @@ app.use(multer({ dest: './uploads/',
  //     res.sendFile("/site/profile");
  // });
 
- app.post('/', function(req, res) {
-  if(done==true){
-    
-    res.end("File uploaded");
-    res.redirect('/')
-  }
+ app.post('/profile', function(req, res) {
+    console.log(req.files);
+    console.log(req.user);
+    db.file.create({
+      UserId: req.user.id,
+      path: req.files.userPhoto.path
+    }).success(function (file){
+      res.send(file);
+    }).error(function (){
+      res.send("OOPS");
+    })
  });
 
- app.get('/users/:id', function (req, res) {
-     res.render('site/home');
- });
+app.get('/users/:id', function (req, res) {
+   res.render('site/home');
+});
 
  app.post('/profile', function(req, res) {
-
+    
     console.log("\n\n\n\n\n\n"+req.files.userPhoto.path);
  });
 
@@ -173,10 +193,13 @@ app.post('/signup', function (req, res) {
       console.log("msg:", msg.message);
      // res.redirect('/');
      res.send('ERROR');
+     req.login(user);
     },
     function(err, user, msg){
       //res.send("Other");
-      res.redirect('/users/' + user.id);
+      req.login(user, function (err) {
+        res.redirect('/users/' + user.id);
+      });
     });
     //console.log(req.body);
     //res.redirect('/');

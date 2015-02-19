@@ -129,7 +129,7 @@
             <li class="dropdown">
 
 
-                <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
+                <a href="/signup" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Sign-up/Login<i class="icon-sort-down"></i></a>
 
                 <ul class="dropdown-menu pull-right">
                     <li><a href="#">Log Out</a></li>
@@ -179,6 +179,8 @@
                 <input type="file" name="userPhoto" />
                 <input type="submit" value="Upload Image" name="submit">
                 </form>
+                <div id="result">
+                </div>
                  
                  <!-- <div class="uploadingzone">
                     <img src="/image.png" /></img>
@@ -214,23 +216,21 @@ Kaiwe Habedehre Hetschapfah i sog ja nix, i red ja bloß midanand auf’d Schell
 
   <script>
   $(document).ready(function() {
+        $("#uploadForm").on("submit", function (e) {
+                e.preventDefault();
+            $('#uploadForm').ajaxSubmit(function (file){
+                console.log(arguments);
+                var $img = $("<img>").attr("src", "/" +file.path);
+                console.log($img)
+                $("#result").append($img);
+                alert("wow");
+            });
+        });
+    
 
-     $('#uploadForm').submit(function() {
 
-        $(this).ajaxSubmit({
-
-            error: function(xhr) {
-                    status('Error: ' + xhr.status);
-            },
-
-            success: function(response) {
-                      console.log(response);
-            }
+       
     });
-        //Very important line, it disable the page refresh.
-    return false;
-    });    
-});
   </script>
       </body>
 

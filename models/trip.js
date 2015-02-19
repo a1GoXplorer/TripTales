@@ -1,3 +1,4 @@
+
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
@@ -15,3 +16,4 @@ module.exports = function(sequelize, DataTypes) {
 
   return trip;
 };
+
