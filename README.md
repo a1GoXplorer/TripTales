@@ -1,2 +1,3 @@
 # TripTales
-A Travel Blog with Kids in Mind, also happens to be my last project at GA.
+A Travel Blog with young adults in mind, also happens to be my last project at GA.
+Here I want to further explore express, nodejs, javascript, bootstrap, etc.
